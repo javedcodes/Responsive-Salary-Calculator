@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Designed by JV Codes | www.jvcodes.com -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Salary Calculator | JV Codes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="left-section">
+      <h1>Salary Calculator</h1>
+      <div class="form-group">
+        <label for="salary-amount">Salary amount:</label>
+        <div class="input-group">
+          <input type="number" id="salary-amount" placeholder="0">
+          <div class="doller">$</div>
+          <select id="salary-type">
+            <option value="hour">Per Hour</option>
+            <option value="day">Per Day</option>
+            <option value="week">Per Week</option>
+            <option value="month">Per Month</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="hours-per-week">Hours per week:</label>
+        <input type="number" id="hours-per-week" placeholder="Number of Hours">
+      </div>
+      <div class="form-group">
+        <label for="days-per-week">Days per week:</label>
+        <input type="number" id="days-per-week" placeholder="Days 1 to 7">
+      </div>
+      <div class="form-group">
+        <label for="holidays-per-year">Holidays per year:</label>
+        <input type="number" id="holidays-per-year" placeholder="Number of Holidays">
+      </div>
+      <div class="form-group">
+        <label for="vacation-days-per-year">Vacation days per year:</label>
+        <input type="number" id="vacation-days-per-year" placeholder="Number of Vacation">
+      </div>
+      <div class="button-group">
+        <button id="calculate-btn">Calculate</button>
+        <button id="clear-btn" class="small-btn">Clear</button>
+      </div>
+    </div>
+    <div class="right-section">
+      <h1>Result</h1>
+      <table>
+        <thead>
+          <tr>
+            <th></th>
+            <th>Unadjusted</th>
+            <th>Adjusted <br>(<span class="small-text">Holidays & Vacation</span>)</th>
+          </tr>
+        </thead>
+        <tbody id="result-table">
+            <tr>
+                <td>Hourly</td>
+                <td class="result-value" id="hourly-unadjusted"></td>
+                <td class="result-value" id="hourly-adjusted"></td>
+              </tr>
+              <tr>
+                <td>Daily</td>
+                <td class="result-value" id="daily-unadjusted"></td>
+                <td class="result-value" id="daily-adjusted"></td>
+              </tr>
+              <tr>
+                <td>Weekly</td>
+                <td class="result-value" id="weekly-unadjusted"></td>
+                <td class="result-value" id="weekly-adjusted"></td>
+              </tr>
+              <tr>
+                <td>Monthly</td>
+                <td class="result-value" id="monthly-unadjusted"></td>
+                <td class="result-value" id="monthly-adjusted"></td>
+              </tr>
+              <tr>
+                <td>Annual</td>
+                <td class="result-value" id="annual-unadjusted"></td>
+                <td class="result-value" id="annual-adjusted"></td>
+              </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
